@@ -1,136 +1,737 @@
-<!DOCTYPE HTML>
-<!--
-	TXT by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>rudymeza54/DataSciencePortfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="homepage is-preload">
-		<div id="page-wrapper">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAM - Data Science Portfolio</title>
+  <!-- Bootstrap Lux Theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.2.3/dist/lux/bootstrap.min.css">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">RAM</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <br>
+  <br>
+  <br>
+<br>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 fade-in">
+            <br>
+          <h1 class="display-4">Data Science<br>Portfolio</h1>
+          <br>
+          <p class="lead">Transforming complex data into meaningful insights through interactive dashboards, Shiny applications, and data visualizations.</p>
+          <div class="d-flex gap-3">
+            <a href="#projects" class="btn btn-primary btn-lg">View Projects</a>
+            <a href="#contact" class="btn btn-outline-light btn-lg">Contact Me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  <br>
 
-			<!-- Nav -->
-				<nav id="nav">
-					<ul>
-						<li class="current"><a href="index.html">Home</a></li>
-						<li>
-							<a href="#">Python</a>
-							<ul>
-								<li><a href="https://github.com/rudymeza54/python/blob/master/housing_prediction/Module_7_Final_Project.ipynb">Machine Learning: LASSO Regression</a></li>
-								<li><a href="https://rudy-meza.shinyapps.io/hypertension_shap1/">Machine Learning: XGBOOST</a></li>
-							</ul>
-							
-						</li>
-						<li>
-							<a href="#">R</a>
-							<ul>
-								<li><a href="#">Machine Learning: LASSO Regression</a></li>
-								<li><a href="#">Machine Learning: XGBOOST</a></li>
+  <!-- Projects Section -->
+  <section id="projects" class="py-5">
+    <div class="container py-5">
+      <h2 class="text-center mb-5 fade-in">Projects & Applications</h2>
+      
+      <!-- Project Filter -->
+      <div class="d-flex justify-content-center mb-5 fade-in">
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-primary active filter-btn" data-filter="all">All</button>
+          <button type="button" class="btn btn-outline-primary filter-btn" data-filter="dashboard">Dashboards</button>
+          <button type="button" class="btn btn-outline-primary filter-btn" data-filter="shiny">Shiny Apps</button>
+          <button type="button" class="btn btn-outline-primary filter-btn" data-filter="react">React Apps</button>
+          <button type="button" class="btn btn-outline-primary filter-btn" data-filter="ml">ML Projects</button>
+          <button type="button" class="btn btn-outline-primary filter-btn" data-filter="de">Data Engineering</button>
+        </div>
+      </div>
+      
+      <!-- Project Cards -->
+      <div class="row g-4" id="project-grid">
+        <!-- Dashboard Project -->
+        <div class="col-lg-6 mb-4 project-item fade-in" data-category="dashboard">
+          <div class="card h-100">
+            <img src="img/projects/superstore.png" class="card-img-top" alt="Dashboard Project">
+            <div class="card-body">
+              <h5 class="card-title">Superstore Dashboard</h5>
+              <p class="card-text">Interactive Tableau dashboard for visualizing sales performance with filtering capabilities and key performance indicators.</p>
+              <div class="mb-3">
+                <span class="badge bg-primary me-2">Tableau</span>
+                <span class="badge bg-secondary me-2">Data Visualization</span>
+              </div>
+              <div class="d-flex justify-content-between">
+                <a href="https://github.com/rudymeza54/sales-dashboard" class="btn btn-sm btn-outline-primary">
+                  <i class="fab fa-github me-2"></i>View Code
+                </a>
+                <a href="https://public.tableau.com/views/SuperStoreData_17178037094810/Dashboard3?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="btn btn-sm btn-primary">
+                  <i class="fas fa-external-link-alt me-2"></i>Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Main Shiny App Project (Original Style) -->
+<div class="col-lg-6 mb-4 project-item fade-in" data-category="shiny">
+    <div class="card h-100">
+      <img src="img/projects/visitors.png" class="card-img-top" alt="Shiny App">
+      <div class="card-body">
+        <h5 class="card-title">Website Traffic</h5>
+        <p class="card-text">R Shiny application for exploring and analyzing website traffic</p>
+        <div class="mb-3">
+          <span class="badge bg-info me-2">R</span>
+          <span class="badge bg-secondary me-2">Shiny</span>
+          <span class="badge bg-secondary">Widgets</span>
+        </div>
+        <div class="d-flex justify-content-between">
+          <a href="# class="btn btn-sm btn-outline-primary">
+            <i class="fab fa-github me-2"></i>View Code
+          </a>
+          <a href="https://rudy-meza.shinyapps.io/visitors/" class="btn btn-sm btn-primary">
+            <i class="fas fa-play me-2"></i>Run App
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- "More Shiny Apps" Card with Expand Button -->
+  <div class="col-lg-6 mb-4 project-item fade-in" data-category="shiny">
+    <div class="card h-100 more-apps-card">
+      <div class="card-body d-flex flex-column justify-content-center align-items-center text-center p-4">
+        <h5 class="card-title mb-3">More Shiny Applications</h5>
+        <p class="card-text mb-4">Explore my additional interactive Shiny applications for data analysis and visualization</p>
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#moreShinyApps" aria-expanded="false" aria-controls="moreShinyApps">
+          <i class="fas fa-chevron-down me-2"></i>View More Apps
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Collapsible Section for Additional Apps (Full Width) -->
+  <div class="collapse mt-2 mb-4" id="moreShinyApps">
+    <div class="row">
+      <!-- Financial Dashboard Shiny App -->
+      <div class="col-lg-6 mb-4 project-item fade-in" data-category="shiny">
+        <div class="card h-100 border-0 shadow-sm">
+          <img src="img/projects/financial-dashboard.jpg" class="card-img-top" alt="Financial Dashboard">
+          <div class="card-body p-4">
+            <h5 class="card-title fw-bold">Financial Dashboard</h5>
+            <p class="card-text text-muted">Interactive dashboard for financial analysis with real-time data visualization, trend forecasting, and portfolio optimization tools.</p>
+            <div class="mb-3">
+              <span class="badge bg-info me-2">R</span>
+              <span class="badge bg-secondary me-2">Shiny</span>
+              <span class="badge bg-warning">Finance</span>
+            </div>
+            <div class="d-flex justify-content-between">
+              <a href="https://github.com/rudymeza54/financial-dashboard" class="btn btn-sm btn-outline-primary">
+                <i class="fab fa-github me-2"></i>View Code
+              </a>
+              <a href="https://rudy-meza.shinyapps.io/financedash/" class="btn btn-sm btn-primary">
+                <i class="fas fa-play me-2"></i>Run App
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Healthcare Metrics Shiny App -->
+      <div class="col-lg-6 mb-4 project-item fade-in" data-category="shiny">
+        <div class="card h-100 border-0 shadow-sm">
+          <img src="img/projects/healthcare-app.jpg" class="card-img-top" alt="Healthcare Metrics App">
+          <div class="card-body p-4">
+            <h5 class="card-title fw-bold">Healthcare Metrics Analyzer</h5>
+            <p class="card-text text-muted">Shiny application for healthcare professionals to analyze patient outcomes, treatment efficacy, and resource allocation with customizable reporting.</p>
+            <div class="mb-3">
+              <span class="badge bg-info me-2">R</span>
+              <span class="badge bg-secondary me-2">Shiny</span>
+              <span class="badge bg-danger">Healthcare</span>
+            </div>
+            <div class="d-flex justify-content-between">
+              <a href="https://github.com/rudymeza54/healthcare-metrics" class="btn btn-sm btn-outline-primary">
+                <i class="fab fa-github me-2"></i>View Code
+              </a>
+              <a href="https://rudy-meza.shinyapps.io/healthmetrics/" class="btn btn-sm btn-primary">
+                <i class="fas fa-play me-2"></i>Run App
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Machine Learning Playground Shiny App -->
+      <div class="col-lg-6 mb-4 project-item fade-in" data-category="shiny">
+        <div class="card h-100 border-0 shadow-sm">
+          <img src="img/projects/ml-playground.jpg" class="card-img-top" alt="ML Playground">
+          <div class="card-body p-4">
+            <h5 class="card-title fw-bold">ML Model Playground</h5>
+            <p class="card-text text-muted">Interactive platform for testing and comparing various machine learning models on uploaded datasets with parameter tuning and performance metrics visualization.</p>
+            <div class="mb-3">
+              <span class="badge bg-info me-2">R</span>
+              <span class="badge bg-secondary me-2">Shiny</span>
+              <span class="badge bg-success">Machine Learning</span>
+            </div>
+            <div class="d-flex justify-content-between">
+              <a href="https://github.com/rudymeza54/ml-playground" class="btn btn-sm btn-outline-primary">
+                <i class="fab fa-github me-2"></i>View Code
+              </a>
+              <a href="https://rudy-meza.shinyapps.io/mlplayground/" class="btn btn-sm btn-primary">
+                <i class="fas fa-play me-2"></i>Run App
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Geo-Spatial Analysis Shiny App -->
+      <div class="col-lg-6 mb-4 project-item fade-in" data-category="shiny">
+        <div class="card h-100 border-0 shadow-sm">
+          <img src="img/projects/geo-spatial.jpg" class="card-img-top" alt="Geo-Spatial Analysis">
+          <div class="card-body p-4">
+            <h5 class="card-title fw-bold">Geo-Spatial Analysis Tool</h5>
+            <p class="card-text text-muted">Interactive mapping application for spatial data analysis with demographic overlays, clustering algorithms, and customizable region selection.</p>
+            <div class="mb-3">
+              <span class="badge bg-info me-2">R</span>
+              <span class="badge bg-secondary me-2">Shiny</span>
+              <span class="badge bg-primary">GIS</span>
+            </div>
+            <div class="d-flex justify-content-between">
+              <a href="https://github.com/rudymeza54/geo-spatial-tool" class="btn btn-sm btn-outline-primary">
+                <i class="fab fa-github me-2"></i>View Code
+              </a>
+              <a href="https://rudy-meza.shinyapps.io/geospatial/" class="btn btn-sm btn-primary">
+                <i class="fas fa-play me-2"></i>Run App
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+        
+        <!-- React App Project -->
+        <div class="col-lg-6 mb-4 project-item fade-in" data-category="react">
+          <div class="card h-100">
+            <img src="img/projects/real_estate.png" class="card-img-top" alt="React App">
+            <div class="card-body">
+              <h5 class="card-title">Real Estate Data Visualization</h5>
+              <p class="card-text">React application that tracks economic indicators using FRED Data</p>
+              <div class="mb-3">
+                <span class="badge bg-primary me-2">React</span>
+                <!-- <span class="badge bg-secondary me-2">D3.js</span> -->
+                <span class="badge bg-secondary">JavaScript</span>
+              </div>
+              <div class="d-flex justify-content-between">
+                <a href="https://github.com/rudymeza54/data-viz-app" class="btn btn-sm btn-outline-primary">
+                  <i class="fab fa-github me-2"></i>View Code
+                </a>
+                <a href="https://econdash.netlify.app/" class="btn btn-sm btn-primary">
+                  <i class="fas fa-external-link-alt me-2"></i>Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- ML Project -->
+        <!-- Playing Card Image Classification Project -->
+<div class="col-lg-6 mb-4 project-item fade-in" data-category="ml">
+  <div class="card h-100">
+    <img src="img/projects/imbd.png" class="card-img-top" alt="Playing Card Classifier">
+    <div class="card-body">
+      <h5 class="card-title">IMBD Movies Challenge</h5>
+      <p class="card-text">This project focuses on performing ETL (Extract, Transform, Load) operations and conducting in-depth data analysis on a large IMDB movies dataset. A key aspect of the analysis is a comparative study of Quentin Tarantino’s films against the broader dataset.</p>
+      <div class="mb-3">
+        <span class="badge bg-primary me-2">Python</span>
+        <span class="badge bg-secondary me-2">Docker</span>
+        <span class="badge bg-secondary">Pyspark</span>
+      </div>
+      <div class="d-flex justify-content-between">
+        <a href="https://github.com/rudymeza54/ml_projects/blob/main/src/imbd_movies/README.md" class="btn btn-sm btn-outline-primary">
+          <i class="fab fa-github me-2"></i>View Code
+        </a>
+        <a href="https://rudolfmeza.com/posts/imbd_part_one/" class="btn btn-sm btn-primary">
+          <i class="fas fa-file-alt me-2"></i>Report
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
 
-							</ul>
-						</li>
-						<li>
-							<a href="#">Data Engineering</a>
-							<ul>
-								<li><a href="https://github.com/rudymeza54/python/blob/master/etl/et1_main.py">ETL with SQL and Python</a></li>
-								<li><a href = "https://github.com/rudymeza54/python/blob/master/etl/trend_monthly.py">ETL with SQL and Python Time-Series</a></li>
-								<li><a href="#">ETL with SQL and R</a></li>
+<!-- Card Game Strategy Optimization Project -->
+<div class="col-lg-6 mb-4 project-item fade-in" data-category="ml">
+  <div class="card h-100">
+    <img src="img/projects/hypertension.png" class="card-img-top" alt="Card Game Strategy">
+    <div class="card-body">
+      <h5 class="card-title">MEPS Hypertension Prediction SHAP Explainer</h5>
+      <p class="card-text">The application uses SHAP (SHapley Additive exPlanations) values to explain the predictions and help users understand the factors contributing to hypertension risk assessment.</p>
+      <div class="mb-3">
+        <span class="badge bg-primary me-2">Python</span>
+        <span class="badge bg-secondary me-2">Shiny</span>
+        <span class="badge bg-secondary">XGBOOST</span>
+      </div>
+      <div class="d-flex justify-content-between">
+        <a href="https://github.com/rudymeza54/ml_projects/blob/main/src/meps_classifier_shap/README.md" class="btn btn-sm btn-outline-primary">
+          <i class="fab fa-github me-2"></i>View Code
+        </a>
+        <a href="https://rudy-meza.shinyapps.io/hypertension_shap1/" class="btn btn-sm btn-primary">
+          <i class="fas fa-chart-line me-2"></i>Demo
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
 
-							</ul>
-						</li>
-						<li>
-							<a href="">TABLEAU</a>
-							<ul>
-								<li><a href="https://public.tableau.com/app/profile/rudy2360/viz/SuperStoreData_17178037094810/Dashboard1">Super Store: Sales vs Profit</a></li>
+      <!-- Data Engineering -->
+      <div class="col-lg-6 mb-4 project-item fade-in" data-category="de">
+        <div class="card h-100">
+          <img src="img/projects/front_end.png" class="card-img-top" alt="Data Engineering Project">
+          <div class="card-body">
+            <h5 class="card-title">Data Engineering Project</h5>
+            <p class="card-text">The Tariff Impact Analysis Dashboard provides an interactive visualization of how tariffs affect agriculture and lumber markets.</p>
+            <div class="mb-3">
+              <span class="badge bg-primary me-2">Python API Flask</span>
+              <span class="badge bg-secondary me-2">Docker</span>
+              <span class="badge bg-secondary">Postgres</span>
+            </div>
+            <div class="d-flex justify-content-between">
+              <a href="https://github.com/rudymeza54/tariff_impact/blob/main/README.md" class="btn btn-sm btn-outline-primary">
+                <i class="fab fa-github me-2"></i>View Code
+              </a>
+              <a href="https://tariffimpact.netlify.app/" class="btn btn-sm btn-primary">
+                <i class="fas fa-file-alt me-2"></i>Report
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+      <!-- View More Button -->
+      <div class="text-center mt-5 fade-in">
+        <a href="https://github.com/rudymeza54" class="btn btn-outline-primary">View More Projects</a>
+      </div>
+    </div>
+  </section>
 
-							</ul>
-						</li>
-						<li>
-							<a href="">Power BI</a>
-							<ul>
-								<li><a href="https://app.powerbi.com/view?r=eyJrIjoiNjdiM2YwMTItOTRkMi00ZjJiLTkxNmUtMjQwZjNkYWIwNzZlIiwidCI6IjQ5NGQyMmQ2LTM4OTMtNGQzOC04NjAzLTcwNWIyYjA1ZDgxOCIsImMiOjZ9">Data Science Salariers</a></li>
+  <!-- Skills Section -->
+  <section id="skills" class="py-5 bg-light">
+    <div class="container py-5">
+      <h2 class="text-center mb-5 fade-in">Skills & Expertise</h2>
+      
+      <div class="row">
+        <!-- Programming Skills -->
+        <div class="col-lg-4 mb-4 fade-in">
+          <div class="card h-100">
+            <div class="card-body">
+              <h4 class="card-title mb-4">
+                <i class="fas fa-code text-primary me-2"></i>Programming
+              </h4>
+              
+              <!-- Python Skill -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>Python</span>
+                  <span>80%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar bg-primary" style="width: 80%"></div>
+                </div>
+              </div>
+              
+              <!-- R Skill -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>R</span>
+                  <span>95%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar bg-primary" style="width: 95%"></div>
+                </div>
+              </div>
+              
+              <!-- SQL Skill -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>SQL</span>
+                  <span>80%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar bg-primary" style="width: 80%"></div>
+                </div>
+              </div>
+              
+              <!-- JavaScript Skill -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>JavaScript</span>
+                  <span>25%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar bg-primary" style="width: 25%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Data Science Skills -->
+        <div class="col-lg-4 mb-4 fade-in">
+          <div class="card h-100">
+            <div class="card-body">
+              <h4 class="card-title mb-4">
+                <i class="fas fa-brain text-success me-2"></i>Data Science
+              </h4>
+              
+              <!-- Machine Learning Skill -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>Machine Learning</span>
+                  <span>85%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar bg-success" style="width: 85%"></div>
+                </div>
+              </div>
+              
+              <!-- Statistical Analysis Skill -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>Statistical Analysis</span>
+                  <span>90%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar bg-success" style="width: 90%"></div>
+                </div>
+              </div>
+              
+              <!-- Data Processing Skill -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>Data Processing</span>
+                  <span>95%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar bg-success" style="width: 95%"></div>
+                </div>
+              </div>
+              
+              <!-- Deep Learning Skill -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>Deep Learning</span>
+                  <span>20%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar bg-success" style="width: 20%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Visualization Skills -->
+        <div class="col-lg-4 mb-4 fade-in">
+          <div class="card h-100">
+            <div class="card-body">
+              <h4 class="card-title mb-4">
+                <i class="fas fa-chart-bar text-info me-2"></i>Visualization
+              </h4>
+              
+              <!-- Tableau Skill -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>Tableau</span>
+                  <span>85%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar bg-info" style="width: 85%"></div>
+                </div>
+              </div>
+              
+              <!-- Power BI Skill -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>Power BI</span>
+                  <span>80%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar bg-info" style="width: 80%"></div>
+                </div>
+              </div>
+              
+              <!-- D3.js Skill -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>D3.js</span>
+                  <span>25%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar bg-info" style="width: 25%"></div>
+                </div>
+              </div>
+              
+              <!-- Matplotlib/Seaborn Skill -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>Matplotlib/Seaborn</span>
+                  <span>80%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar bg-info" style="width: 80%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-							</ul>
-						</li>
-						<li>
-							<a href="">Looker</a>
-							<ul>
-								<li><a href="https://lookerstudio.google.com/reporting/c414dccf-374a-400f-a2a8-144e449ce73f">Inflation Dashboard</a></li>
+  <!-- Experience Section -->
+  <section id="experience" class="py-5">
+    <div class="container py-5">
+      <h2 class="text-center mb-5 fade-in">Experience & Education</h2>
+      
+      <div class="timeline">
+        <!-- Experience Item 1 -->
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Oct 2021 - Present</span>
+            <h4>Senior Research Data Analyst</h4>
+            <p>Cherokee Insights</p>
+            <p>Conducted causal inference analysis using Synthetic Control and Permutation methods to assess Air Force Squadron policies, leading 
+                to a 2% reduction in medical utilization rates.</p>
+            <p>Implemented Interrupted Time Series and Fixed Effects Models to evaluate military policies, enabling data-driven decision-making.</p>
+            <p>Automated data extraction with web scraping in R, reducing manual workload by 1.5 hours per task.</p>
+            <p>Developed a LASSO Regression Model to pinpoint key drivers of medical encounters, improving analytical accuracy.</p>
+            <p>Optimized ETL workflows and streamlined data integration into MSSQL Server using Python and R, enhancing processing efficiency.</p>
+          </div>
+        </div>
+        <br>
+        <br>
+        
+        <!-- Experience Item 2 -->
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Jan 2021 - Oct 2021</span>
+            <h4>Research Analyst 2</h4>
+            <p>Cherokee Insights</p>
+            <p>Streamlined data processing using SSIS, Python, and R, connecting to an MSSQL database for ETL pipeline automation.</p>
+            <p>Built time series forecasting models to predict monthly medical training needs for Air Force medical personnel</p>
+            <p>Conducted hypothesis testing (Shapiro test, t-test) and regression analysis on monthly KPI reports, improving operational performance.</p>
+            <p>Evaluated COVID-19 vaccination rates across military bases using SQL and statistical models, leading to cost-saving recommendations</p>
+          </div>
+        </div>
+        <br>
+        <br>
+        
 
-							</ul>
-						</li>
-						<li>
-							<a href="">React</a>
-							<ul>
-								<li><a href="https://econdash.netlify.app/">Real Estate Economic Dashboard</a></li>
+        
+        <!-- Education Item -->
+      <div class="timeline-item fade-in">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2018-2019</span>
+          <h4>Master's in Quantitative Economics</h4>
+          <p>California Lutheran University</p>
+          <p>Specialized in economic forecasting, financial economics, and data science. Focused on machine learning, econometric modeling, and predictive analytics.</p>
+        </div>
+      </div>
+      
+      <!-- Professional Certificate -->
+      <div class="timeline-item fade-in">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2024</span>
+          <h4>Professional Certificate in Data Engineering</h4>
+          <p>MIT</p>
+          <p>Specialized in Python programming, SQL databases, big data management, and AI/machine learning.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-							</ul>
-						</li>
-					</ul>
-				</nav>
 
-			<!-- Banner -->
-				<section id="banner">
-					<div class="content">
-						<h2>RAM</h2>
-						<h2>Data Science Portfolio</h2>
-					</div>
-				</section>
+       
 
-			
+        
 
-			<!-- Footer -->
-				<footer id="footer">
-					<div class="container">
-						<div class="row gtr-200">
-							<div class="col-12">
 
-								<!-- About -->
-									
 
-							</div>
-							<div class="col-12">
 
-								<!-- Contact -->
-									<section>
-										<h2 class="major"><span>Get in touch</span></h2>
-										<ul class="contact">
-											<li><a class="icon brands fa-facebook-f" href="#"><span class="label">Facebook</span></a></li>
-											<li><a class="icon brands fa-twitter" href="#"><span class="label">Twitter</span></a></li>
-											<li><a class="icon brands fa-instagram" href="#"><span class="label">Instagram</span></a></li>
-											<li><a class="icon brands fa-dribbble" href="#"><span class="label">Dribbble</span></a></li>
-											<li><a class="icon brands fa-linkedin-in" href="#"><span class="label">LinkedIn</span></a></li>
-										</ul>
-									</section>
+  <!-- Contact Section -->
+  <section id="contact" class="py-5 bg-light">
+    <div class="container py-5">
+      <h2 class="text-center mb-5 fade-in">Get In Touch</h2>
+      
+      <div class="row justify-content-center mb-5">
+        <div class="col-md-4 text-center mb-4 fade-in">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h4 class="fw-bold mb-2">Email</h4>
+          <p class="mb-0">rmeza.andre@gmail.com</p>
+        </div>
+        
+        <div class="col-md-4 text-center mb-4 fade-in">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <h4 class="fw-bold mb-2">Location</h4>
+          <p class="mb-0">Southern California</p>
+        </div>
+        
+        <!-- <div class="col-md-4 text-center mb-4 fade-in">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <h4 class="fw-bold mb-2">Phone</h4>
+          <p class="mb-0">(123) 456-7890</p>
+        </div>
+      </div> -->
+      
+      <div class="row justify-content-center">
+        <div class="col-lg-8 fade-in">
+          <div class="card">
+            <div class="card-body p-4">
+              <form id="contactForm">
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="name" class="form-label">Your Name</label>
+                    <input type="text" class="form-control" id="name" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="email" class="form-label">Your Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="subject" class="form-label">Subject</label>
+                  <input type="text" class="form-control" id="subject">
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea class="form-control" id="message" rows="5" required></textarea>
+                </div>
+                <div class="text-end">
+                  <button type="submit" class="btn btn-primary">Send Message</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-							</div>
-						</div>
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <div class="social-links">
+        <a href="https://github.com/rudymeza54" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/rudymeza" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:rmeza.andre@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+        <a href="#" class="social-link" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
+      <p class="mb-0">&copy; 2023 Rudy Meza. All rights reserved.</p>
+    </div>
+  </footer>
 
-						<!-- Copyright -->
-							<div id="copyright">
-								<ul class="menu">
-									<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-								</ul>
-							</div>
-
-					</div>
-				</footer>
-
-		</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Custom JS for Project Filtering -->
+  <script>
+    // Project filtering
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const projectItems = document.querySelectorAll('.project-item');
+      
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          // Remove active class from all buttons
+          filterBtns.forEach(btn => {
+            btn.classList.remove('active');
+            btn.classList.remove('btn-primary');
+            btn.classList.add('btn-outline-primary');
+          });
+          
+          // Add active class to clicked button
+          this.classList.add('active');
+          this.classList.add('btn-primary');
+          this.classList.remove('btn-outline-primary');
+          
+          const filterValue = this.getAttribute('data-filter');
+          
+          projectItems.forEach(item => {
+            if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+      
+      // Basic form handling
+      const contactForm = document.getElementById('contactForm');
+      if (contactForm) {
+        contactForm.addEventListener('submit', function(event) {
+          event.preventDefault();
+          alert('Thank you for your message! This is a demo form. In a real implementation, this would send your message to the recipient.');
+          contactForm.reset();
+        });
+      }
+      
+      // Add fade-in animation to elements as they become visible
+      const fadeElements = document.querySelectorAll('.fade-in');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      fadeElements.forEach(element => {
+        element.style.opacity = 0;
+        element.style.transform = 'translateY(20px)';
+        element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(element);
+      });
+    });
+  </script>
+</body>
 </html>
